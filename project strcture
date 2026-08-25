@@ -1,0 +1,9 @@
+/cyber-ai
+│── .env
+│── requirements.txt
+│── app.py
+├── /templates
+│   └── index.html
+└── /static
+    ├── style.css
+    └── app.js
