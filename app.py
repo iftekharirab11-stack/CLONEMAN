@@ -42,11 +42,10 @@ def chat():
         "X-Title": "CyberSec Local AI"
     }
 
-    payload = {
-        "model": "openai/gpt-4o", # High-tier multimodal model
+ payload = {
+        "model": "openrouter/free", 
         "messages": messages
     }
-
     try:
         response = requests.post(
             "https://openrouter.ai/api/v1/chat/completions",
