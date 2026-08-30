@@ -1,0 +1,24 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=CLONEMAN
+Comment=Cybersecurity AI Assistant for Kali Linux
+Exec=/home/irab/Desktop/my\ codes/CLONEMAN/run.sh
+Icon=/home/irab/Desktop/my\ codes/CLONEMAN/static/logo.svg
+Terminal=false
+Categories=Development;Utility;Security;
+StartupNotify=true
+X-GNOME-Autostart-enabled=true
+Keywords=cybersecurity;ai;kali;penetration;testing;opsec;vulnerability;
+
+# Application metadata
+X-GNOME-SingleWindow=true
+X-KDE-StartupWMClass=CLONEMAN
+
+# Additional info
+GenericName=Security Analysis Tool
+MimeType=text/plain;text/x-python;image/png;image/jpeg;
+
+# URLs and documentation
+X-AppImage-Signature=
+X-AppStream-Ignore=false

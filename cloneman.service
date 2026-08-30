@@ -1,0 +1,18 @@
+[Unit]
+Description=CLONEMAN - Cybersecurity AI Assistant for Kali Linux
+Documentation=https://github.com/YOUR_REPO
+After=network.target
+
+[Service]
+Type=simple
+User=%u
+WorkingDirectory=%h/Desktop/my codes/CLONEMAN
+Environment="PATH=%h/Desktop/my codes/CLONEMAN/venv/bin"
+ExecStart=%h/Desktop/my codes/CLONEMAN/venv/bin/python3 %h/Desktop/my codes/CLONEMAN/app.py
+Restart=on-failure
+RestartSec=10s
+StandardOutput=append:/tmp/cloneman.log
+StandardError=append:/tmp/cloneman.log
+
+[Install]
+WantedBy=default.target

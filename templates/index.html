@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLONEMAN - Cybersecurity AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='logo.svg') }}" type="image/svg+xml">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="{{ url_for('static', filename='logo.svg') }}" alt="CLONEMAN" class="logo">
+                <div class="header-text">
+                    <h2>🛡️ CLONEMAN</h2>
+                    <p class="header-subtitle">Cybersecurity AI Assistant - Kali Linux Edition</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <span id="status-indicator" class="status-dot" title="Server Status"></span>
+                <span class="status-text" id="status-text">Initializing...</span>
+            </div>
+        </div>
+
+        <div class="chat-box" id="chat-box">
+            <div class="welcome-message">
+                <h3>Welcome to CLONEMAN</h3>
+                <p>Professional Cybersecurity AI Assistant</p>
+                <hr>
+                <p><strong>📝 Features:</strong></p>
+                <ul>
+                    <li>Security Code Review & Vulnerability Analysis</li>
+                    <li>OPSEC & Threat Intelligence Guidance</li>
+                    <li>Network Diagram & Log File Analysis</li>
+                    <li>CVE Research & Exploitation Techniques</li>
+                    <li>Local Chat History (File-Based Storage)</li>
+                    <li>Image & Code Snippet Analysis</li>
+                </ul>
+                <p><strong>💾 Chat Storage:</strong> Local computer storage at ~/.local/share/cloneman/</p>
+                <p style="font-size: 0.9em; color: #999;">Start by typing a security question or uploading an image...</p>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <input type="file" id="image-input" class="file-input" accept="image/*">
+            <label for="image-input" class="file-label">[+] Image</label>
+            
+            <input 
+                type="text" 
+                id="chat-input" 
+                placeholder="Analyze security issues, code review, OPSEC tactics, vulnerability assessment..." 
+                autocomplete="off"
+            >
+            
+            <button id="send-btn" class="btn-primary">Execute</button>
+            <button id="history-btn" class="btn-secondary" title="Export Chat History">📥 Export</button>
+            <button id="clear-btn" class="btn-danger" title="Clear all chat data">🗑️ Clear</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
